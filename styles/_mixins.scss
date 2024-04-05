@@ -1,0 +1,72 @@
+@use "sass:math";
+@function rem($px) {
+	@return math.div($px, 16) + rem;
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-h-center {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+@mixin flex-v-center {
+	display: flex;
+	justify-content: center;
+}
+@mixin mobile-card {
+	border-radius: rem(8);
+	width: rem(327);
+	padding: rem(26) rem(32) rem(32);
+	box-shadow: $shadow 40px 60px 50px -47px;
+	.user-section {
+		display: grid;
+		width: fit-content;
+		grid-template-columns: rem(28) 1fr;
+		grid-template-rows: 1fr 1fr;
+		row-gap: rem(4);
+		margin-bottom: rem(18);
+		img {
+			width: rem(28);
+			border-radius: 50%;
+			grid-row: 1 / span-2;
+			justify-self: center;
+			align-self: center;
+		}
+		.user-name,
+		.user-title {
+			margin-left: rem(17);
+		}
+		.user-name {
+			font-size: rem(13);
+			line-height: rem(13);
+			grid-column: 2;
+		}
+		.user-title {
+			font-size: rem(11);
+			line-height: rem(11);
+			opacity: 50%;
+			grid-column: 2;
+		}
+	}
+	.testimony-title {
+		font-size: rem(20);
+		font-weight: 600;
+		margin-bottom: rem(16);
+	}
+	.testimony-comment {
+		font-size: rem(13);
+		font-weight: 500;
+		line-height: rem(18);
+		opacity: 70%;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1000px) {
+		@content;
+	}
+}

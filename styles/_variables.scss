@@ -1,0 +1,24 @@
+// Font styles
+@font-face {
+	font-family: Barlow;
+	font-weight: 500;
+	src: url(/assets/fonts/BarlowSemiCondensed/BarlowSemiCondensed-Medium.ttf);
+}
+
+@font-face {
+	font-family: Barlow;
+	font-weight: 600;
+	src: url(/assets/fonts/BarlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf);
+}
+
+// Color styles
+$primary-purple: hsl(263, 55%, 52%);
+$primary-gray: hsl(217, 19%, 35%);
+$primary-black: hsl(219, 29%, 14%);
+$primary-white: hsl(0, 0%, 100%);
+
+$secondary-100: hsl(210, 46%, 95%);
+$secondary-200: hsl(0, 0%, 81%);
+
+$light-purple: hsl(264, 82%, 70%);
+$shadow: hsl(217, 19%, 35%, 24.74%);
